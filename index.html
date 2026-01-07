@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Backup | Proteção Anti-Hacker para Servidores de Jogos</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased selection:bg-cyan-500 selection:text-black">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i class="fa-solid fa-shield-halved text-cyan-400 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-wider text-white">SIGMA <span class="text-cyan-400">BACKUP</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#problem" class="text-gray-300 hover:text-white hover:scale-105 transition-all text-sm font-medium">O Problema</a>
+                        <a href="#solution" class="text-gray-300 hover:text-white hover:scale-105 transition-all text-sm font-medium">Como Funciona</a>
+                        <a href="#pricing" class="text-gray-300 hover:text-white hover:scale-105 transition-all text-sm font-medium">Planos</a>
+                        <a href="#pricing" class="bg-cyan-500 hover:bg-cyan-400 text-black px-4 py-2 rounded-sm font-bold skew-x-[-10deg] transition-all">Proteger Agora</a>
+                    </div>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-white">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 absolute w-full border-b border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#problem" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">O Problema</a>
+                <a href="#solution" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Como Funciona</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white">Planos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="cyber-grid"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-400 mb-8 animate-pulse">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+                    <span class="text-sm font-semibold tracking-wide">SEGURANÇA DE NÍVEL MILITAR PARA GAMES</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-6">
+                    Não Deixe Hackers <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 text-neon glitch-hover">ZERAREM SEU SERVIDOR</span>
+                </h1>
+                
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                    Jogadores perdem itens. Você perde jogadores. O servidor morre.<br>
+                    Pare de arriscar tudo. Tenha backups automáticos e monitorados agora.
+                </p>
+                
+                <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#pricing" class="btn-tech px-8 py-4 font-bold text-lg uppercase tracking-wider inline-flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        Começar Backup
+                    </a>
+                    <a href="#problem" class="px-8 py-4 border border-gray-600 text-gray-300 font-bold text-lg uppercase tracking-wider hover:border-cyan-400 hover:text-white transition-all rounded-sm">
+                        Entenda o Risco
+                    </a>
+                </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute top-1/2 left-0 -translate-y-1/2 -ml-20 w-64 h-64 bg-cyan-500/10 rounded-full blur-[100px] -z-10"></div>
+            <div class="absolute top-1/4 right-0 -mr-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[100px] -z-10"></div>
+        </div>
+    </header>
+
+    <!-- Pain Section (The Problem) -->
+    <section id="problem" class="py-20 bg-slate-900 relative border-t border-red-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                    <span class="text-red-500 text-danger-glow"><i class="fa-solid fa-triangle-exclamation mr-2"></i> GAME OVER</span> PARA SEUS DADOS?
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    A história é sempre a mesma: um ataque acontece, os dados somem, os players reclamam e o servidor esvazia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pain Card 1 -->
+                <div class="bg-red-950/20 border border-red-900/50 p-6 rounded-xl relative overflow-hidden group hover:bg-red-900/30 transition-all animate-on-scroll">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-all">
+                        <i class="fa-solid fa-user-secret text-6xl text-red-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">Ataques Hackers</h3>
+                        <p class="text-gray-400">Invasões maliciosas que corrompem ou deletam bancos de dados inteiros em segundos.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Card 2 -->
+                <div class="bg-red-950/20 border border-red-900/50 p-6 rounded-xl relative overflow-hidden group hover:bg-red-900/30 transition-all animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-all">
+                        <i class="fa-solid fa-ghost text-6xl text-red-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">Players Desistem</h3>
+                        <p class="text-gray-400">Quando um jogador perde o item que comprou ou farmou, ele não volta mais. Ele vai para o concorrente.</p>
+                    </div>
+                </div>
+
+                <!-- Pain Card 3 -->
+                <div class="bg-red-950/20 border border-red-900/50 p-6 rounded-xl relative overflow-hidden group hover:bg-red-900/30 transition-all animate-on-scroll" style="transition-delay: 400ms;">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-all">
+                        <i class="fa-solid fa-sack-dollar text-6xl text-red-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold text-red-400 mb-2">Prejuízo Real</h3>
+                        <p class="text-gray-400">Todo o tempo e dinheiro investido no servidor vão para o lixo sem um backup confiável.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-900/5 -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                
+                <div class="mb-12 lg:mb-0 animate-on-scroll">
+                    <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+                        A Solução Definitiva:<br>
+                        <span class="text-cyan-400 text-neon">SIGMA BACKUP</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Esqueça a dor de cabeça. Nós blindamos o progresso do seu servidor com tecnologia de nuvem automatizada.
+                    </p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-cyan-400 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-white block">Backup Externo na Nuvem</strong>
+                                <span class="text-gray-400 text-sm">Seu servidor físico pode queimar, seus dados continuam salvos conosco.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock text-cyan-400 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-white block">Frequência de 1 Hora</strong>
+                                <span class="text-gray-400 text-sm">Perda mínima de dados. No máximo, volta 1 hora no tempo.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-envelope text-cyan-400 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-white block">Notificações por Email</strong>
+                                <span class="text-gray-400 text-sm">Receba um "OK" a cada backup realizado com sucesso.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="relative animate-on-scroll float-anim">
+                    <!-- Tech Illustration Visualization -->
+                    <div class="bg-slate-800 rounded-2xl p-2 shadow-2xl border border-cyan-500/30">
+                        <div class="bg-black rounded-xl p-6 relative overflow-hidden">
+                            <!-- Code Rain Mockup -->
+                            <div class="font-mono text-xs text-green-500 opacity-60 mb-4">
+                                > INITIATING_CONNECTION...<br>
+                                > SERVER_ID: GAMER_01<br>
+                                > STATUS: <span class="text-red-500">VULNERABLE</span><br>
+                                > DEPLOYING SIGMA SHIELD...<br>
+                                > BACKUP PROCESS: 100% COMPLETE<br>
+                                > SECURE STORAGE: <span class="text-cyan-400">CONFIRMED</span>
+                            </div>
+                            
+                            <div class="flex justify-center items-center py-8">
+                                <i class="fa-solid fa-server text-6xl text-gray-600 mr-8"></i>
+                                <div class="h-1 w-20 bg-gray-700 relative overflow-hidden">
+                                    <div class="h-full w-full bg-cyan-400 absolute animate-[ping_1.5s_infinite]"></div>
+                                </div>
+                                <i class="fa-solid fa-cloud-ul text-6xl text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]"></i>
+                            </div>
+
+                            <div class="text-center">
+                                <span class="inline-block px-3 py-1 bg-green-900/50 text-green-400 rounded text-xs font-mono border border-green-500/30">
+                                    <i class="fa-solid fa-circle-check mr-1"></i> PROTEGIDO
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section id="benefits" class="py-20 bg-slate-900 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="glass-card p-6 rounded-lg animate-on-scroll">
+                    <div class="text-4xl font-bold text-white mb-2"><span class="stat-number" data-target="24">0</span>/7</div>
+                    <div class="text-cyan-400 text-sm font-bold uppercase">Monitoramento</div>
+                </div>
+                <div class="glass-card p-6 rounded-lg animate-on-scroll" style="transition-delay: 100ms;">
+                    <div class="text-4xl font-bold text-white mb-2"><span class="stat-number" data-target="1">0</span>h</div>
+                    <div class="text-cyan-400 text-sm font-bold uppercase">Intervalo de Backup</div>
+                </div>
+                <div class="glass-card p-6 rounded-lg animate-on-scroll" style="transition-delay: 200ms;">
+                    <div class="text-4xl font-bold text-white mb-2"><span class="stat-number" data-target="3">0</span> Dias</div>
+                    <div class="text-cyan-400 text-sm font-bold uppercase">Retenção Garantida</div>
+                </div>
+                <div class="glass-card p-6 rounded-lg animate-on-scroll" style="transition-delay: 300ms;">
+                    <div class="text-4xl font-bold text-white mb-2">100%</div>
+                    <div class="text-cyan-400 text-sm font-bold uppercase">Paz de Espírito</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-white mb-4">Invista na Segurança do Seu Servidor</h2>
+                <p class="text-gray-400">Quanto custa reconquistar a confiança de todos os seus jogadores? Muito mais que isso.</p>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8 items-stretch">
+                
+                <!-- Custom Plan -->
+                <div class="glass-card p-8 rounded-2xl md:w-1/3 flex flex-col order-2 md:order-1 animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white">Plano Personalizado</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Para grandes redes de servidores.</p>
+                    <div class="my-8">
+                        <span class="text-4xl font-bold text-white">Consulte</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="text-gray-300 flex items-center"><i class="fa-solid fa-check text-cyan-500 w-6"></i> Múltiplos Servidores</li>
+                        <li class="text-gray-300 flex items-center"><i class="fa-solid fa-check text-cyan-500 w-6"></i> Retenção Estendida</li>
+                        <li class="text-gray-300 flex items-center"><i class="fa-solid fa-check text-cyan-500 w-6"></i> Suporte Prioritário</li>
+                    </ul>
+                    <a href="#" class="block text-center w-full py-3 border border-gray-600 text-white rounded font-bold hover:border-white transition-all">Falar com Consultor</a>
+                </div>
+
+                <!-- Main Plan -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-900 border border-cyan-500 p-8 rounded-2xl md:w-1/3 flex flex-col relative transform md:-translate-y-4 shadow-[0_0_30px_rgba(0,242,234,0.15)] order-1 md:order-2 animate-on-scroll">
+                    <div class="absolute top-0 right-0 bg-cyan-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                    <h3 class="text-2xl font-bold text-white">Sigma Shield</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Proteção completa para seu servidor.</p>
+                    <div class="my-8 flex items-baseline">
+                        <span class="text-sm text-gray-400 mr-1">R$</span>
+                        <span class="text-5xl font-extrabold text-white">50</span>
+                        <span class="text-gray-400 ml-1">/mês</span>
+                    </div>
+                    <div class="h-px w-full bg-white/10 mb-8"></div>
+                    <ul class="space-y-4 mb-8 flex-1">
+                        <li class="text-white flex items-center"><i class="fa-solid fa-check text-cyan-400 w-6"></i> <strong>Backup a cada 1 hora</strong></li>
+                        <li class="text-white flex items-center"><i class="fa-solid fa-check text-cyan-400 w-6"></i> Retenção de 3 dias</li>
+                        <li class="text-white flex items-center"><i class="fa-solid fa-check text-cyan-400 w-6"></i> Armazenamento Externo Seguro</li>
+                        <li class="text-white flex items-center"><i class="fa-solid fa-check text-cyan-400 w-6"></i> Notificação por Email</li>
+                        <li class="text-white flex items-center"><i class="fa-solid fa-check text-cyan-400 w-6"></i> Monitoramento da Equipe</li>
+                    </ul>
+                    <button class="btn-tech w-full py-4 text-xl font-bold uppercase tracking-wider">
+                        Contratar Agora
+                    </button>
+                    <p class="text-center text-xs text-gray-500 mt-4">Instalação e configuração inclusas.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <i class="fa-solid fa-shield-halved text-cyan-500 text-xl"></i>
+                <span class="font-bold text-lg text-white">SIGMA <span class="text-gray-500">BACKUP</span></span>
+            </div>
+            
+            <div class="text-gray-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Sigma Backup. Todos os direitos reservados. 
+                <span class="mx-2">|</span>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Termos</a>
+                <span class="mx-2">|</span>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Privacidade</a>
+            </div>
+
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors"><i class="fa-brands fa-discord text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
